@@ -1,13 +1,13 @@
 import React from "react";
 import View from "../View";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import './styles.module.css';
 
 export default (props) => { 
     return(
         <View className={styles.searchArea}>
             <input placeholder="buscar" className={styles.search}/>
-            <button className={styles.searchButton} type="submit">
-                <FontAwesome5 name="search" size={18} color="#666666" />
+            <button placeholder={faSearch} className={styles.searchButton} type="submit">
             </button>
         </View>
     )

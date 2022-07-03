@@ -84,7 +84,11 @@ function Chatbot() {
                 <span ref={messagesEndRef}></span>
             </div>
             <div className='chatbot-message-container'>
-                <input placeholder='Escreva sua mensagem...' type="text" className='chatbot-message-container-input' value={text} onChange={(e) => setText(e.target.value)} />
+                <input placeholder='Escreva sua mensagem...' type="text" className='chatbot-message-container-input' value={text} onChange={(e) => setText(e.target.value)} onKeyPress={(e) => {
+                    if (e.key === "Enter") {
+                        submitMessage()
+                    }
+                }} />
                 <img src={sendMessage} className="chatbot-message-container-icon" alt="message icon" onClick={() => submitMessage()} />
             </div>
         </div>

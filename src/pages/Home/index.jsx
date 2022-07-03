@@ -6,6 +6,7 @@ import InfoWhiteCard from '../../components/InfoWhiteCard';
 import '../Home/styles.css'
 import { faBook, faShoppingCart, faComment, faPlusCircle } from "@fortawesome/free-solid-svg-icons";
 import IntimusFooter from '../../components/IntimusFooter';
+import Footer from '../../components/Footer';
 
 function Home() {
 
@@ -21,6 +22,7 @@ function Home() {
         <CardContent iconTitle={faComment} iconLink={faComment} title="chama a kira" desc="dúvidas sobre saúde íntima? chama a Kira! aqui você encontra dúvidas já respondidas por ginecologistas" descLink="conheça mais" />
       </div>
       <IntimusFooter />
+      <Footer />
     </div>
   )
 }

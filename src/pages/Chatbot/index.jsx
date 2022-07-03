@@ -25,6 +25,7 @@ function Chatbot() {
     }
 
     const submitMessage = async (textMessage = '') => {
+        if(text === '') return;
         setText('');
         const data = {
             sessionId: sessionId,

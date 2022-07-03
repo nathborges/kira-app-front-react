@@ -1,0 +1,44 @@
+.card-content {
+    padding: 16px;
+    background-color: #ecf1f4;
+    height: 100px;
+    width: 100%;
+    display: block;
+    margin-bottom: 0;
+}
+
+.card-title-text {
+    background: linear-gradient(354.34deg, #eb1a29 4.51%, #ff00bc 95.49%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.125rem;
+    line-height: 1rem;
+    font-family: Kotex;
+    font-weight: 700;
+    padding-top: 4px;
+    display: inline;
+    padding-left: 4px;
+    margin-left: 10px;
+}
+
+.card-desc {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 0;
+    color: #626162;
+    margin-top: 10px;
+    height: 45px;
+}
+
+.card-link {
+    font-weight: 700;
+    font-size: .75rem;
+    line-height: 16px;
+    color: #f62459;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}

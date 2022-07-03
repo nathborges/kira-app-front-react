@@ -3,3 +3,8 @@
   flex-direction: column;
   align-items: center;
 }
+
+.home-content {
+  position: absolute;
+  top: 540px;
+}

@@ -8,8 +8,7 @@ import Footer from "../../components/Footer";
 
 export default props => {
   return (
-    <SafeAreaView style={[globalStyles.container, globalStyles.text]}>
-      <ScrollView>
+    <View>
         <Nav>Conteúdo</Nav>
         <Category/>
         <Search/>
@@ -23,7 +22,6 @@ export default props => {
         />
         </View>
         <Footer />
-      </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 };

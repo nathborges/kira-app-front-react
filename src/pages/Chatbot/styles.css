@@ -18,6 +18,13 @@
     height: 50px;
 }
 
+.button-back {
+    border: none;
+    background: none;
+    box-shadow: none;
+    cursor: pointer;
+}
+
 .chatbot-header-user {
     display: flex;
     flex-direction: row;

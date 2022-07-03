@@ -1,12 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Home from './pages/Home';
+import Chatbot from './pages/Chatbot';
 import './fonts/Kotex-Bold.ttf'
 import './fonts/Kotex-Light.ttf'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Home />
+    <Chatbot />
   </React.StrictMode>
 )

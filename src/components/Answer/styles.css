@@ -12,7 +12,7 @@
     gap: 8px;
 
 
-    width: 131px;
+    width: 60%;
     min-height: 29px;
 
 
@@ -21,6 +21,7 @@
     background: rgba(245, 14, 113, 0.6);
     border-radius: 0px 10px 10px 10px;
     color: #fff;
+    margin-bottom: 20px;
 }
 
 .answer-options {
@@ -41,6 +42,8 @@
     background: rgba(245, 14, 113, 0.6);
     border-radius: 5px;
     color: #fff;
+    width: 60%;
+    margin-bottom: 5px;
 }
 
 .send-message {
@@ -49,10 +52,12 @@
     justify-content: center;
     align-items: center;
     padding: 8px 8px 8px 16px;
-    gap: 8px;
+    width: 60%;
 
     /* Secondary/ Lilac */
 
     background: #A787BE;
     border-radius: 10px 0px 10px 10px;
+    align-self: flex-end;
+    margin-bottom: 20px;
 }

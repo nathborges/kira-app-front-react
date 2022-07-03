@@ -1,0 +1,17 @@
+.header {
+      position: fixed;
+      background-color: #ecf1f4;
+      height: 80px;
+      width: 100%;
+    }
+
+.row {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .menu {
+      align-self: center;
+      fill: #626162;
+    }
+  

@@ -5,6 +5,7 @@ import HomeContainer from '../../components/HomeContainer';
 import InfoWhiteCard from '../../components/InfoWhiteCard';
 import '../Home/styles.css'
 import { faBook, faShoppingCart, faComment, faPlusCircle } from "@fortawesome/free-solid-svg-icons";
+import IntimusFooter from '../../components/IntimusFooter';
 
 function Home() {
 
@@ -19,6 +20,7 @@ function Home() {
         <CardContent iconTitle={faShoppingCart} iconLink={faShoppingCart} title="shopping" desc="em nosso shopping você encontra produtos especiais. além disso, você também pode criar seus kits personalizados" descLink="visite agora!" />
         <CardContent iconTitle={faComment} iconLink={faComment} title="chama a kira" desc="dúvidas sobre saúde íntima? chama a Kira! aqui você encontra dúvidas já respondidas por ginecologistas" descLink="conheça mais" />
       </div>
+      <IntimusFooter />
     </div>
   )
 }

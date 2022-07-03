@@ -1,0 +1,28 @@
+.info-white-card {
+    width: 85%;
+    height: 40px;
+    padding: 12px 20px;
+    margin-bottom: 14px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgb(0 0 0 / 20%);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: "row";
+    align-items: center;
+    gap: 20px;
+    margin-top: 80px;
+    position: absolute;
+    top: 15px;
+}
+
+.info-white-card-text {
+    font-size: .75rem;
+    line-height: 18px;
+    font-weight: 700;
+    color: #626162;
+    text-align: start;
+}
+
+.info-white-card-icon {
+    font-size: 1.5rem;
+}

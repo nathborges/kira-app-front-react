@@ -11,7 +11,7 @@ export default function HomeContainer() {
       end={{ x: 10, y: 500 }}
       colors={['#eb1a29', '#ff00bc']}>
       <View style={styles.homeTitle}>
-        <FontAwesome5 name="calendar-alt" size={24} color="#fff" />
+        <FontAwesome5 name="calendar-alt" color="#fff" />
         <Text style={[globalStyles.text, styles.homeTitle]}>calendário menstrual</Text>
       </View>
       <View style={styles.infoTextContainer}>

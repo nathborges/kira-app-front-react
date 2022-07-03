@@ -3,15 +3,34 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBook } from '@fortawesome/free-solid-svg-icons';
 import './styles.css';
 
-function Answer({ message }) {
+function Answer({ data, handleOption }) {
+
+    const handleOptionClick = (option) => {
+        handleOption(option.input.text);
+    }
     return (
         <div className="answer-container">
-            <div className='answer-message'>
-                <span>{message}</span>
-            </div>
-            <div className='answer-options'>
-                <span>opção 1</span>
-            </div>
+            {
+                data.type === 'received' && (
+                    <div className='answer-message'>
+                        <span>{data.text}</span>
+                    </div>
+                )
+            }
+            {
+                data.type === 'send' && (
+                    <div className='send-message'>
+                        <span>{data.text}</span>
+                    </div>
+                )
+            }
+            {
+                data.type === 'received' && data.options?.map(option => (
+                    <div className='answer-options'>
+                        <span onClick={() => handleOptionClick(option.value)}>{option.label}</span>
+                    </div>
+                ))
+            }
         </div>
     );
 }

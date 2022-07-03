@@ -115,6 +115,7 @@
 }
 
 .chatbot-flow {
-    margin-top: 200px;
-    height: 500px;
+    overflow-x: scroll;
+    margin-top: 30px;
+    height: 80vh;
 }

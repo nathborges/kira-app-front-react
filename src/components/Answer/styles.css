@@ -1,3 +1,8 @@
+.answer-container {
+    display: flex;
+    flex-direction: column;
+}
+
 .answer-message {
     display: flex;
     flex-direction: row;
@@ -31,15 +36,23 @@
     padding: 8px 16px;
     gap: 8px;
 
-    position: absolute;
-    width: 78px;
-    height: 24px;
-    left: 16px;
-    top: 388px;
-
     /* Secondary/Light Pink 1 */
 
     background: rgba(245, 14, 113, 0.6);
     border-radius: 5px;
     color: #fff;
+}
+
+.send-message {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 8px 8px 16px;
+    gap: 8px;
+
+    /* Secondary/ Lilac */
+
+    background: #A787BE;
+    border-radius: 10px 0px 10px 10px;
 }

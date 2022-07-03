@@ -11,31 +11,47 @@ import { kiraService } from '../../../services/chabotbot/kira-service';
 function Chatbot() {
     const [sessionId, setSessionId] = useState();
     const [text, setText] = useState('');
-    const [received, setReceived] = useState([]);
+    const [messages, setMessages] = useState([]);
 
     const startSessionKira = async () => {
         const results = await kiraService.startSession();
         setSessionId(results.data.sessionId)
     }
 
-    const submitMessage = async () => {
+    const submitMessage = async (textMessage = '') => {
         setText('');
         const data = {
             sessionId: sessionId,
             input: {
                 message_type: "text",
-                text: 'firstContact'
+                text: textMessage || 'firstContact'
             }
         }
-
+        setMessages((oldMessages) => [...oldMessages, {
+            type: 'send',
+            text: textMessage || text,
+        }])
         const results = await kiraService.sendMessage(data);
-        const getMessages = (results.data.result.output.generic).filter((message) => message.response_type === 'text').map((message) => message.text)
-        setReceived(getMessages.join());
+        const newMessages = (results.data.result.output.generic).filter((message) => message.response_type === 'text').map((message) => message.text);
+        const newOptions = (results.data.result.output.generic).filter((message) => message.response_type === 'option').map((message) => message.options);
+        const messagesOptions = {
+            type: 'received',
+            text: newMessages.join(),
+            options: newOptions[0]
+        }
+        setMessages((oldMessages) => [...oldMessages, messagesOptions]);
+    }
+
+    const handleOption = (option) => {
+      submitMessage(option)
     }
 
     useEffect(() => {
         startSessionKira();
     }, [])
+
+    useEffect(() => {
+    }, [messages])
 
     return (
         <div className="chatbot">
@@ -51,7 +67,11 @@ function Chatbot() {
                 <FontAwesomeIcon icon={faBars} />
             </header>
             <div className='chatbot-flow'>
-                <Answer message={received} />
+                {
+                    messages.map(message => (
+                        <Answer data={message} handleOption={handleOption}/>
+                    ))
+                }
             </div>
             <div className='chatbot-message-container'>
                 <input placeholder='Escreva sua mensagem...' type="text" className='chatbot-message-container-input' value={text} onChange={(e) => setText(e.target.value)} />

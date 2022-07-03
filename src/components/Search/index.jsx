@@ -1,7 +1,6 @@
 import React from "react";
 import View from "../View";
 import './styles.module.css';
-import { FontAwesome5 } from '@expo/vector-icons';
 
 export default (props) => { 
     return(

@@ -26,8 +26,8 @@ function Answer({ data, handleOption }) {
             }
             {
                 data.type === 'received' && data.options?.map(option => (
-                    <div className='answer-options'>
-                        <span onClick={() => handleOptionClick(option.value)}>{option.label}</span>
+                    <div onClick={() => handleOptionClick(option.value)} className='answer-options'>
+                        <span>{option.label}</span>
                     </div>
                 ))
             }

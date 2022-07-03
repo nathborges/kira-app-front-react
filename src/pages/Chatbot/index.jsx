@@ -7,16 +7,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Answer from '../../components/Answer';
 import { useEffect, useRef, useState } from 'react';
 import { kiraService } from '../../../services/chabotbot/kira-service';
+import { Link } from 'react-router-dom';
 
 function Chatbot() {
     const [sessionId, setSessionId] = useState();
     const [text, setText] = useState('');
     const [messages, setMessages] = useState([]);
-      const messagesEndRef = useRef(null)
+    const messagesEndRef = useRef(null)
 
-  const scrollToBottom = () => {
-    messagesEndRef.current.scrollIntoView({ behavior: "smooth" })
-  }
+    const scrollToBottom = () => {
+        messagesEndRef.current.scrollIntoView({ behavior: "smooth" })
+    }
 
     const startSessionKira = async () => {
         const results = await kiraService.startSession();
@@ -48,7 +49,7 @@ function Chatbot() {
     }
 
     const handleOption = (option) => {
-      submitMessage(option)
+        submitMessage(option)
     }
 
     useEffect(() => {
@@ -62,7 +63,9 @@ function Chatbot() {
     return (
         <div className="chatbot">
             <header className='chatbot-header'>
-                <FontAwesomeIcon icon={faChevronLeft} />
+                <Link to='/'>
+                    <FontAwesomeIcon icon={faChevronLeft} />
+                </Link>
                 <div className='chatbot-header-user'>
                     <img src={kiraLogo} className='chatbot-header-icon' alt="kira" />
                     <div className='chatbot-header-user-text'>
@@ -75,7 +78,7 @@ function Chatbot() {
             <div className='chatbot-flow'>
                 {
                     messages.map(message => (
-                        <Answer data={message} handleOption={handleOption}/>
+                        <Answer data={message} handleOption={handleOption} />
                     ))
                 }
                 <span ref={messagesEndRef}></span>

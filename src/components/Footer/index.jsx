@@ -7,22 +7,22 @@ function Footer() {
 
     return (
         <div className="footer">
-            <div className="footer-link">
+            <NavLink to="/" className="footer-link">
                 <FontAwesomeIcon icon={faCalendarAlt} color="#626162" />
                 <span className="footer-link-text">calendário</span>
-            </div>
-            <div className="footer-link">
+            </NavLink>
+            <NavLink to="/articles" className="footer-link">
                 <FontAwesomeIcon icon={faBook} color="#626162" />
                 <span className="footer-link-text">conteúdo</span>
-            </div>
-            <div className="footer-link-home">
+            </NavLink>
+            <NavLink to="/" className="footer-link">
                 <FontAwesomeIcon icon={faHome} color="#fff" />
-            </div>
+            </NavLink>
             <NavLink to="/chat" className="footer-link">
                 <FontAwesomeIcon icon={faComment} color="#626162" />
                 <span className="footer-link-text">chama a kira</span>
             </NavLink>
-            <NavLink to="/shopping" className="footer-link">
+            <NavLink to="/" className="footer-link">
                 <FontAwesomeIcon icon={faShoppingCart} color="#626162" />
                 <span className="footer-link-text">shopping</span>
             </NavLink>

@@ -10,10 +10,10 @@ function Footer() {
                 <FontAwesomeIcon icon={faCalendarAlt} color="#626162" />
                 <span className="footer-link-text">calendário</span>
             </div>
-            <div className="footer-link">
+            <Link to="/articles" className="footer-link">
                 <FontAwesomeIcon icon={faBook} color="#626162" />
                 <span className="footer-link-text">conteúdo</span>
-            </div>
+            </Link>
             <div className="footer-link-home">
                 <FontAwesomeIcon icon={faHome} color="#fff" />
             </div>

@@ -1,5 +1,6 @@
 
 import './styles.css'
+import { useNavigate } from 'react-router-dom';
 import { faBook, faShoppingCart, faComment, faPlusCircle, faChevronLeft, faBars } from "@fortawesome/free-solid-svg-icons";
 import sendMessage from '../../assets/icons/sendMessage.svg';
 import kiraLogo from '../../assets/kiraLogo.png';
@@ -7,7 +8,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Answer from '../../components/Answer';
 import { useEffect, useRef, useState } from 'react';
 import { kiraService } from '../../../services/chabotbot/kira-service';
-import { Link } from 'react-router-dom';
 
 function Chatbot() {
     const [sessionId, setSessionId] = useState();
@@ -61,12 +61,14 @@ function Chatbot() {
         scrollToBottom();
     }, [messages])
 
+    let navigate = useNavigate();
+
     return (
         <div className="chatbot">
             <header className='chatbot-header'>
-                <Link to='/'>
-                    <FontAwesomeIcon icon={faChevronLeft} />
-                </Link>
+                <button className="button-back" onClick={() => navigate(-1)}>
+                <FontAwesomeIcon icon={faChevronLeft} />
+                </button>
                 <div className='chatbot-header-user'>
                     <img src={kiraLogo} className='chatbot-header-icon' alt="kira" />
                     <div className='chatbot-header-user-text'>

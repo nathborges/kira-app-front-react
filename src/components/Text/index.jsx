@@ -1,10 +1,11 @@
 import React from "react";
 import './styles.module.css';
+import View from '../View';
 
 export default props => {
     return(
-        <div className={styles.text}>
+        <View className={styles.text}>
             {props.children}
-        </div>
-    )
-}
+        </View>
+    );
+};

@@ -6,5 +6,5 @@ export default props => {
         <div className={styles.container}>
             {props.children}
         </div>
-    )
-}
+    );
+};

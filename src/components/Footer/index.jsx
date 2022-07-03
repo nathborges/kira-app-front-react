@@ -15,7 +15,7 @@ function Footer() {
                 <FontAwesomeIcon icon={faBook} color="#626162" />
                 <span className="footer-link-text">conteúdo</span>
             </NavLink>
-            <NavLink to="/" className="footer-link">
+            <NavLink to="/" className="footer-link-home">
                 <FontAwesomeIcon icon={faHome} color="#fff" />
             </NavLink>
             <NavLink to="/chat" className="footer-link">

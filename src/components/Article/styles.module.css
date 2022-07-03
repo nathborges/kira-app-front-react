@@ -1,0 +1,55 @@
+
+    .article {
+      width: 100%;
+      height: auto;
+      border-bottom: 1px solid #666;
+    }
+
+    .articleImageArea {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .articleImage {
+      width: 100%;
+      height: auto;
+    }
+
+    .articleDetails {
+      position: absolute;
+      width: 100%;
+      padding: 1em;
+    }
+
+    .articleDate{
+      background: rgba(0,0,0,.55);
+      border-radius: 4px;
+      font-weight: 300;
+      text-shadow: 0 1px 1px rgb(0 0 0 / 80%);
+      font-size: 0.8em;
+    }
+
+    .articleTitleMini {
+      text-shadow: 0 1px 1px rgb(0 0 0 / 80%);
+      background: rgba(245,14,113,.6);
+      border-radius: 4px;
+      font-weight: 700;
+    }
+
+    .articleTitle {
+      font-size: 1.8em;
+      text-transform: lowercase;
+    }
+
+    .articleText {
+      fonts-size: 1em;
+      color: #626162;
+    }
+
+    .shareArticle {
+      color: #f62459;
+      position: relative;
+    }
+  

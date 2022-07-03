@@ -5,13 +5,18 @@ import sendMessage from '../../assets/icons/sendMessage.svg';
 import kiraLogo from '../../assets/kiraLogo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Answer from '../../components/Answer';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { kiraService } from '../../../services/chabotbot/kira-service';
 
 function Chatbot() {
     const [sessionId, setSessionId] = useState();
     const [text, setText] = useState('');
     const [messages, setMessages] = useState([]);
+      const messagesEndRef = useRef(null)
+
+  const scrollToBottom = () => {
+    messagesEndRef.current.scrollIntoView({ behavior: "smooth" })
+  }
 
     const startSessionKira = async () => {
         const results = await kiraService.startSession();
@@ -51,6 +56,7 @@ function Chatbot() {
     }, [])
 
     useEffect(() => {
+        scrollToBottom();
     }, [messages])
 
     return (
@@ -72,6 +78,7 @@ function Chatbot() {
                         <Answer data={message} handleOption={handleOption}/>
                     ))
                 }
+                <span ref={messagesEndRef}></span>
             </div>
             <div className='chatbot-message-container'>
                 <input placeholder='Escreva sua mensagem...' type="text" className='chatbot-message-container-input' value={text} onChange={(e) => setText(e.target.value)} />
